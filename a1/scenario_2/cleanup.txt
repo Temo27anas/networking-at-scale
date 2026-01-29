@@ -1,0 +1,18 @@
+# Case A:
+# vm-finland , 2 subscribers:
+~/pubsub-env/bin/python3 subscriber.py --project_id=scale315 --sub_id=shared-sub
+
+# vm-finland , 2 publishers
+~/pubsub-env/bin/python3 publisher.py --project_id=scale315 --pub_id=pub-1
+~/pubsub-env/bin/python3 publisher.py --project_id=scale315 --pub_id=pub-2
+
+
+
+# Case B:
+# vm-finland , 1 subscriber , 1 publisher
+~/pubsub-env/bin/python3 subscriber.py --project_id=scale315 --sub_id=shared-sub
+~/pubsub-env/bin/python3 publisher.py --project_id=scale315 --pub_id=pub-finland
+
+# vm-madrid , 1 subscriber , 1 publisher
+~/pubsub-env/bin/python3 subscriber.py --project_id=scale315 --sub_id=shared-sub
+~/pubsub-env/bin/python3 publisher.py --project_id=scale315 --pub_id=pub-madrid
