@@ -1,0 +1,7 @@
+# Initial setup
+gcloud services enable pubsub.googleapis.com
+gcloud config set compute/region europe-north1
+
+
+# Install Pub/Sub client library
+pip3 install --user google-cloud-pubsub
