@@ -1,0 +1,55 @@
+10 seconds load:
+
+
+TOTAL RESULTS
+
+    HTTP
+    http_req_duration..............: avg=1.9ms  min=194.04µs med=440.08µs max=86.34ms p(90)=608.79µs p(95)=747.5µs
+      { expected_response:true }...: avg=1.9ms  min=194.04µs med=440.08µs max=86.34ms p(90)=608.79µs p(95)=747.5µs
+    http_req_failed................: 0.00%  0 out of 31136
+    http_reqs......................: 31136  3113.497266/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.92ms min=217.37µs med=454.37µs max=86.37ms p(90)=629.97µs p(95)=780.44µs
+    iterations.....................: 31136  3113.497266/s
+    vus............................: 4      min=4          max=10
+    vus_max........................: 10     min=10         max=10
+
+    NETWORK
+    data_received..................: 5.3 MB 526 kB/s
+    data_sent......................: 2.4 MB 237 kB/s
+
+
+health_endpoint_requests_total 0.0
+health_endpoint_requests_total 16683.0
+health_endpoint_requests_total 14459.0
+
+
+90 seconds load:
+
+TOTAL RESULTS
+
+    HTTP
+    http_req_duration..............: avg=3.23ms min=37.19µs  med=511.2µs  max=1m0s p(90)=851.04µs p(95)=1.11ms
+      { expected_response:true }...: avg=2.56ms min=37.19µs  med=511.2µs  max=1m0s p(90)=851.03µs p(95)=1.11ms
+    http_req_failed................: 0.00%  3 out of 268025
+    http_reqs......................: 268025 2975.752548/s
+
+    EXECUTION
+    iteration_duration.............: avg=3.25ms min=183.66µs med=526.66µs max=1m0s p(90)=872.58µs p(95)=1.14ms
+    iterations.....................: 268025 2975.752548/s
+    vus............................: 10     min=10          max=10
+    vus_max........................: 10     min=10          max=10
+
+    NETWORK
+    data_received..................: 45 MB  503 kB/s
+    data_sent......................: 20 MB  226 kB/s
+
+
+health_endpoint_requests_total 0.0
+health_endpoint_requests_total 143135.0
+health_endpoint_requests_total 124897.0
+
+
+
+

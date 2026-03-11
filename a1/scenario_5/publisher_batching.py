@@ -8,7 +8,7 @@ topic_id = "flowcontrol-topic"
 
 batch_settings = pubsub_v1.types.BatchSettings(
     max_bytes=10000000, # 10 MB
-    max_messages=1000,  # 1,000 messages
+    max_messages=1000,  # 1000 messages
     max_latency=0.1     # 100 ms
 )
 

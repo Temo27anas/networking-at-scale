@@ -6,7 +6,7 @@ import time
 project_id = "networkedapps-anasandy-2026"
 topic_id = "flowcontrol-topic"
 
-# Publisher flow control: defaults
+# publisher flow control: defaults
 publisher_flow_control = pubsub_v1.types.PublishFlowControl(
     message_limit=1000,
     limit_exceeded_behavior=pubsub_v1.types.LimitExceededBehavior.BLOCK,
@@ -30,7 +30,7 @@ for i in range(100):
     publish_futures.append(future)
     print(f"Publish requested: {i}")
 
-# Wait for all messages to finish publishing
+# wait for all messages to finish publishing
 futures.wait(publish_futures, return_when=futures.ALL_COMPLETED)
 
 end_time = time.time()

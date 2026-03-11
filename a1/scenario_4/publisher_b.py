@@ -6,7 +6,7 @@ import time
 project_id = "networkedapps-anasandy-2026"
 topic_id = "flowcontrol-topic"
 
-# Publisher flow control
+# publisher flow control
 publisher_flow_control = pubsub_v1.types.PublishFlowControl(
     message_limit=10,
     limit_exceeded_behavior=pubsub_v1.types.LimitExceededBehavior.ERROR,
@@ -24,7 +24,7 @@ publish_futures = []
 
 start_time = time.time()
 
-# Publish messages
+# publish messages
 for i in range(100):
     data = json.dumps({"count": i}).encode("utf-8")
     try:
@@ -34,10 +34,10 @@ for i in range(100):
     except Exception as e:
         print(f"Immediate error publishing message {i}: {e}")
 
-# Wait for all futures and catch errors
+# wait for all futures and catch errors
 for i, future in enumerate(publish_futures):
     try:
-        future.result()  # This will raise exceptions for failed publishes
+        future.result()  # raise exceptions for failed publishes
     except Exception as e:
         print(f"Message {i} failed: {e}")
 
